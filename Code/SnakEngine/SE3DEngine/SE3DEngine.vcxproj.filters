@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Comm\Time.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceLayer\WindApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Comm\Optimise.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Comm\CThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceLayer\DeviceGL.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Comm\SEContext.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Image\CTexture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem\CGraphBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem\CRenderStateObj.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Comm\PixelFormat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio\CAudio.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio\CAudioDataSource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio\CAudioFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio\CAudioBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceSystem\CFileDataStream.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneSystem\Camera.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneSystem\Frustum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AppLayer\AppFramework.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AppLayer\AppWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem\CAPIObjFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\CInput.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Front\Front.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CameraControl\UserControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\BoundingGeo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\Def.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\Device.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SEMemeryAlloc\MemaryAllocConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SEMemeryAlloc\SEMemoryTracker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SEMemeryAlloc\SEMemoryAllocObj.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SEMemeryAlloc\SEMemoryNedAlloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SEMemeryAlloc\SEMemoryNedPooling.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SEMemeryAlloc\SEMemoryStdAlloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SEMemeryAlloc\SEMemorySTLAllocator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\Time.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceLayer\IDeviceLayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="model\mesh9.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="model\cmodel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\IShader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\IMaterial.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\TArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceLayer\WindApp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\ITexture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\MeshModel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh\Mesh9.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\Optimise.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\Util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\CThread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Config\Platform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\PixelFormat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\ThrowErr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceLayer\DeviceHelp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rendersystem\CRender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\SEContext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="image\ctexture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\CRenderStateObj.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\CShader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\CGraphBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\CAudioDataSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\CAudio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio\CAudioFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceSystem\CDataStream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneSystem\Camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneSystem\Frustum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AppLayer\AppWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AppLayer\AppFramework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AppLayer\RenderConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\CAPIObjFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\CInput.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Front\Front.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

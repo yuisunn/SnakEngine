@@ -1,0 +1,12 @@
+﻿生成启动时间为 2012-6-26 16:55:59。
+     1>项目“E:\Atest\SnakEngine\Code\SnakEngine\AndroidInput\AndroidInput.vcxproj”在节点 5 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\AndroidInput.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       FinalizeBuildStatus:
+         正在删除文件“Debug\AndroidInput.unsuccessfulbuild”。
+         正在对“Debug\AndroidInput.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\Atest\SnakEngine\Code\SnakEngine\AndroidInput\AndroidInput.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.07

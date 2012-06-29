@@ -1,0 +1,92 @@
+#include <SE3DEngine/Audio/CAudio.h>
+
+namespace SE
+{
+	uint32 CMusicBuffer::m_uPreSecond = 2;
+	//Audiobuffer
+	CAudioBuffer::CAudioBuffer(CAudioDataSourcePtr const& cpDataSource)
+		:m_pDataSource(cpDataSource), m_eFormat(cpDataSource->GetFormat()),m_uFreq(cpDataSource->GetFreq())
+	{
+	}
+	CAudioBuffer::~CAudioBuffer()
+    {
+	}
+
+	//音乐 缓冲
+	// 构造函数
+	/////////////////////////////////////////////////////////////////////////////////
+	CMusicBuffer::CMusicBuffer(CAudioDataSourcePtr const& cpDataSource)
+					: CAudioBuffer(cpDataSource)
+	{
+	}
+	// 析构函数
+	/////////////////////////////////////////////////////////////////////////////////
+	CMusicBuffer::~CMusicBuffer()
+	{
+	}
+
+	// 是否是声音
+	/////////////////////////////////////////////////////////////////////////////////
+	bool CMusicBuffer::IsSound() const
+	{
+		return false;
+	}
+
+	// 缓冲区复位以便于从头播放
+	/////////////////////////////////////////////////////////////////////////////////
+	void CMusicBuffer::Reset()
+	{
+		this->Stop();
+
+		this->DoReset();
+	}
+
+	// 播放音频流
+	/////////////////////////////////////////////////////////////////////////////////
+	void CMusicBuffer::Play(bool loop)
+	{
+		this->DoStop();
+		this->DoPlay(loop);
+	}
+
+	// 停止播放音频流
+	////////////////////////////////////////////////////////////////////////////////
+	void CMusicBuffer::Stop()
+	{
+		this->DoStop();
+		m_pDataSource->Reset();
+	}
+	//声音缓冲
+	// 构造函数
+	/////////////////////////////////////////////////////////////////////////////////
+	CSoundBuffer::CSoundBuffer(CAudioDataSourcePtr const& cpDataSource)
+					: CAudioBuffer(cpDataSource)
+	{
+	}
+
+	// 析构函数
+	/////////////////////////////////////////////////////////////////////////////////
+	CSoundBuffer::~CSoundBuffer()
+	{
+	}
+
+	// 是否是音效
+	/////////////////////////////////////////////////////////////////////////////////
+	bool CSoundBuffer::IsSound() const
+	{
+		return true;
+	}
+
+	// 缓冲区复位
+	/////////////////////////////////////////////////////////////////////////////////
+	void CSoundBuffer::Reset()
+	{
+		this->Stop();
+
+		m_pDataSource->Reset();
+
+		this->DoReset();
+	}
+
+
+}

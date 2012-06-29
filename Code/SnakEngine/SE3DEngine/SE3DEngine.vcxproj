@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppLayer\AppFramework.cpp" />
+    <ClCompile Include="AppLayer\AppWindow.cpp" />
+    <ClCompile Include="Audio\CAudio.cpp" />
+    <ClCompile Include="Audio\CAudioBuffer.cpp" />
+    <ClCompile Include="Audio\CAudioDataSource.cpp" />
+    <ClCompile Include="Audio\CAudioFactory.cpp" />
+    <ClCompile Include="Front\Front.cpp" />
+    <ClCompile Include="Input\CInput.cpp" />
+    <ClCompile Include="Comm\CThread.cpp" />
+    <ClCompile Include="Comm\PixelFormat.cpp" />
+    <ClCompile Include="DeviceLayer\DeviceGL.cpp" />
+    <ClCompile Include="Comm\Optimise.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_WINDLL;%(PreprocessorDefinitions);_AFXEXT</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Comm\Time.cpp" />
+    <ClCompile Include="DeviceLayer\WindApp.cpp" />
+    <ClCompile Include="Image\CTexture.cpp" />
+    <ClCompile Include="Comm\SEContext.cpp" />
+    <ClCompile Include="RenderSystem\CAPIObjFactory.cpp" />
+    <ClCompile Include="RenderSystem\CGraphBuffer.cpp" />
+    <ClCompile Include="RenderSystem\CRenderStateObj.cpp" />
+    <ClCompile Include="ResourceSystem\CFileDataStream.cpp" />
+    <ClCompile Include="SceneSystem\Camera.cpp" />
+    <ClCompile Include="SceneSystem\Frustum.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppLayer\AppFramework.h" />
+    <ClInclude Include="AppLayer\AppWindow.h" />
+    <ClInclude Include="AppLayer\RenderConfig.h" />
+    <ClInclude Include="Audio\CAudio.h" />
+    <ClInclude Include="Audio\CAudioDataSource.h" />
+    <ClInclude Include="CameraControl\UserControl.h" />
+    <ClInclude Include="Audio\CAudioFactory.h" />
+    <ClInclude Include="Front\Front.h" />
+    <ClInclude Include="Input\CInput.h" />
+    <ClInclude Include="Comm\BoundingGeo.h" />
+    <ClInclude Include="Comm\CThread.h" />
+    <ClInclude Include="Comm\Def.h" />
+    <ClInclude Include="Comm\Device.h" />
+    <ClInclude Include="Comm\PixelFormat.h" />
+    <ClInclude Include="DeviceLayer\DeviceHelp.h" />
+    <ClInclude Include="Comm\Optimise.h" />
+    <ClInclude Include="DeviceLayer\IDeviceLayer.h" />
+    <ClInclude Include="image\ctexture.h" />
+    <ClInclude Include="Mesh\Mesh9.h" />
+    <ClInclude Include="Mesh\MeshModel.h" />
+    <ClInclude Include="RenderSystem\CAPIObjFactory.h" />
+    <ClInclude Include="rendersystem\CRender.h" />
+    <ClInclude Include="RenderSystem\CRenderStateObj.h" />
+    <ClInclude Include="RenderSystem\CShader.h" />
+    <ClInclude Include="RenderSystem\CGraphBuffer.h" />
+    <ClInclude Include="Render\IMaterial.h" />
+    <ClInclude Include="Render\IShader.h" />
+    <ClInclude Include="model\cmodel.h" />
+    <ClInclude Include="model\mesh9.h" />
+    <ClInclude Include="Comm\SEContext.h" />
+    <ClInclude Include="ResourceSystem\CDataStream.h" />
+    <ClInclude Include="SceneSystem\Camera.h" />
+    <ClInclude Include="SceneSystem\Frustum.h" />
+    <ClInclude Include="SEMemeryAlloc\MemaryAllocConfig.h" />
+    <ClInclude Include="SEMemeryAlloc\SEMemoryAllocObj.h" />
+    <ClInclude Include="SEMemeryAlloc\SEMemoryNedAlloc.h" />
+    <ClInclude Include="SEMemeryAlloc\SEMemoryNedPooling.h" />
+    <ClInclude Include="SEMemeryAlloc\SEMemoryStdAlloc.h" />
+    <ClInclude Include="SEMemeryAlloc\SEMemorySTLAllocator.h" />
+    <ClInclude Include="SEMemeryAlloc\SEMemoryTracker.h" />
+    <ClInclude Include="Comm\Time.h" />
+    <ClInclude Include="DeviceLayer\WindApp.h" />
+    <ClInclude Include="Comm\TArray.h" />
+    <ClInclude Include="Render\ITexture.h" />
+    <ClInclude Include="Config\Platform.h" />
+    <ClInclude Include="Comm\Util.h" />
+    <ClInclude Include="Comm\ThrowErr.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{02A6950B-6E5E-480B-B811-BA098F32BA53}</ProjectGuid>
+    <RootNamespace>SE3DEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\..\Bin\</OutDir>
+    <IntDir>$(SolutionDir)..\..\BinTemp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\OtherLibs\DXSDK\include;$(SolutionDir)..\SnakEngine;$(SolutionDir)..\..\OtherLibs\boost;$(IncludePath);$(SolutionDir)..\..\OtherLibs\rapidxml;$(SolutionDir)..\..\OtherLibs\oGles\AMD\include\GLE;$(SolutionDir)..\..\OtherLibs\libvorbis\include;$(SolutionDir)..\..\OtherLibs\libogg\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\OtherLibs\DXSDK\Lib\x86;$(LibraryPath)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SE3DEngine", "..\SnakEngine\SE3DEngine\SE3DEngine.vcxproj", "{02A6950B-6E5E-480B-B811-BA098F32BA53}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenglES", "..\SnakEngine\OpenglES\OpenglES.vcxproj", "{92A46E47-3FC8-4F4B-9A6F-40CD2FDBE962}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D3D11", "..\SnakEngine\D3D11\D3D11.vcxproj", "{C1619395-77C2-470A-A26D-8E8407A6EC09}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SEMath", "..\SnakEngine\SEMath\SEMathLibrary.vcxproj", "{99C66E86-0454-419E-94EB-73C3B57DBD14}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenAL", "..\SnakEngine\OpenAL\OpenAL.vcxproj", "{05E17C43-7173-41AE-A74A-F28649211498}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXInput", "..\SnakEngine\DXInput\DXInput.vcxproj", "{638D0D66-5057-4E47-80A5-323DA099D313}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AndroidInput", "..\SnakEngine\AndroidInput\AndroidInput.vcxproj", "{CE8F47E4-99F3-4D38-872F-C3F489B5C35C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02A6950B-6E5E-480B-B811-BA098F32BA53}.Debug|Win32.ActiveCfg = Debug|Win32
+		{02A6950B-6E5E-480B-B811-BA098F32BA53}.Debug|Win32.Build.0 = Debug|Win32
+		{02A6950B-6E5E-480B-B811-BA098F32BA53}.Release|Win32.ActiveCfg = Release|Win32
+		{02A6950B-6E5E-480B-B811-BA098F32BA53}.Release|Win32.Build.0 = Release|Win32
+		{92A46E47-3FC8-4F4B-9A6F-40CD2FDBE962}.Debug|Win32.ActiveCfg = Debug|Win32
+		{92A46E47-3FC8-4F4B-9A6F-40CD2FDBE962}.Debug|Win32.Build.0 = Debug|Win32
+		{92A46E47-3FC8-4F4B-9A6F-40CD2FDBE962}.Release|Win32.ActiveCfg = Release|Win32
+		{92A46E47-3FC8-4F4B-9A6F-40CD2FDBE962}.Release|Win32.Build.0 = Release|Win32
+		{C1619395-77C2-470A-A26D-8E8407A6EC09}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C1619395-77C2-470A-A26D-8E8407A6EC09}.Debug|Win32.Build.0 = Debug|Win32
+		{C1619395-77C2-470A-A26D-8E8407A6EC09}.Release|Win32.ActiveCfg = Release|Win32
+		{C1619395-77C2-470A-A26D-8E8407A6EC09}.Release|Win32.Build.0 = Release|Win32
+		{99C66E86-0454-419E-94EB-73C3B57DBD14}.Debug|Win32.ActiveCfg = Debug|Win32
+		{99C66E86-0454-419E-94EB-73C3B57DBD14}.Debug|Win32.Build.0 = Debug|Win32
+		{99C66E86-0454-419E-94EB-73C3B57DBD14}.Release|Win32.ActiveCfg = Release|Win32
+		{99C66E86-0454-419E-94EB-73C3B57DBD14}.Release|Win32.Build.0 = Release|Win32
+		{05E17C43-7173-41AE-A74A-F28649211498}.Debug|Win32.ActiveCfg = Debug|Win32
+		{05E17C43-7173-41AE-A74A-F28649211498}.Debug|Win32.Build.0 = Debug|Win32
+		{05E17C43-7173-41AE-A74A-F28649211498}.Release|Win32.ActiveCfg = Release|Win32
+		{05E17C43-7173-41AE-A74A-F28649211498}.Release|Win32.Build.0 = Release|Win32
+		{638D0D66-5057-4E47-80A5-323DA099D313}.Debug|Win32.ActiveCfg = Debug|Win32
+		{638D0D66-5057-4E47-80A5-323DA099D313}.Debug|Win32.Build.0 = Debug|Win32
+		{638D0D66-5057-4E47-80A5-323DA099D313}.Release|Win32.ActiveCfg = Release|Win32
+		{638D0D66-5057-4E47-80A5-323DA099D313}.Release|Win32.Build.0 = Release|Win32
+		{CE8F47E4-99F3-4D38-872F-C3F489B5C35C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CE8F47E4-99F3-4D38-872F-C3F489B5C35C}.Debug|Win32.Build.0 = Debug|Win32
+		{CE8F47E4-99F3-4D38-872F-C3F489B5C35C}.Release|Win32.ActiveCfg = Release|Win32
+		{CE8F47E4-99F3-4D38-872F-C3F489B5C35C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

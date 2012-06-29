@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SE3DEngine", "SE3DEngine.vcxproj", "{02A6950B-6E5E-480B-B811-BA098F32BA53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02A6950B-6E5E-480B-B811-BA098F32BA53}.Debug|Win32.ActiveCfg = Debug|Win32
+		{02A6950B-6E5E-480B-B811-BA098F32BA53}.Debug|Win32.Build.0 = Debug|Win32
+		{02A6950B-6E5E-480B-B811-BA098F32BA53}.Release|Win32.ActiveCfg = Release|Win32
+		{02A6950B-6E5E-480B-B811-BA098F32BA53}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
