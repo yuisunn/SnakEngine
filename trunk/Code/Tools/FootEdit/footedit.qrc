@@ -1,0 +1,4 @@
+<RCC>
+  <qresource prefix="../../../Data/texure/icon/draw-triangle1.png" lang="triangle1"/>
+  <qresource prefix="../../../Data/texure/icon/draw-triangle4.png" lang="triangle2"/>
+</RCC>
