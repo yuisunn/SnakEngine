@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <boost/signals2.hpp>
+#include <boost/container/flat_map.hpp>
 #include <boost/array.hpp>
 #include <SE3DEngine/Comm/Time.h>
 #include <SE3DEngine/Comm/Def.h>
@@ -244,17 +245,17 @@ namespace SE
 		uint16 Action(uint16 key) const;
 
 	private:
-		MapVector<uint16, uint16> actionMap_;
+		boost::container::flat_map<uint16, uint16> m_ActionMaps;
 	};
 
-	typedef boost::signals2::signal<void(CInput const &, InputAction const &)> input_signal;
-	typedef boost::shared_ptr<input_signal> action_handler_t;
-	typedef MapVector<uint32_t, InputActionMap> action_maps_t;
+	typedef boost::signals2::signal<void(CInput const &, InputAction const &)> InputSignals;
+	typedef boost::shared_ptr<input_signal> ActionHandlerTs;
+	typedef boost::container::flat_map<uint16, InputActionMap> ActionMapTs;
 
 
 	//  ‰»Î“˝«Ê
 	/////////////////////////////////////////////////////////////////////////////////
-	class KLAYGE_CORE_API CInput
+	class DLL CInput
 	{
 		typedef std::vector<std::pair<InputActionMap, action_handler_t> > action_handlers_t;
 
