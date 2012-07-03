@@ -12,7 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AppLayer\AppFramework.cpp" />
-    <ClCompile Include="AppLayer\AppWindow.cpp" />
     <ClCompile Include="Audio\CAudio.cpp" />
     <ClCompile Include="Audio\CAudioBuffer.cpp" />
     <ClCompile Include="Audio\CAudioDataSource.cpp" />
@@ -39,7 +38,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppLayer\AppFramework.h" />
-    <ClInclude Include="AppLayer\AppWindow.h" />
     <ClInclude Include="AppLayer\RenderConfig.h" />
     <ClInclude Include="Audio\CAudio.h" />
     <ClInclude Include="Audio\CAudioDataSource.h" />
