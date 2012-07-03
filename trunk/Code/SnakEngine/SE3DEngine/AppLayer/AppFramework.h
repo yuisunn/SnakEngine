@@ -42,8 +42,8 @@ namespace SE
 		virtual void Create();
 		virtual void Destroy();
 
-		AppWindowPtr MakeWindow(String const& sName, SRenderConfig const& cpConfig);
-		AppWindowPtr MainWnd() const
+		WindowPtr MakeWindow(String const& sName, SRenderConfig const& cpConfig);
+		WindowPtr MainWnd() const
 		{
 			return m_pWind;
 		}
@@ -109,7 +109,7 @@ namespace SE
 
 		Timer m_Timer;
 
-		AppWindowPtr m_pWind;
+		WindowPtr m_pWind;
 	};
 }
 

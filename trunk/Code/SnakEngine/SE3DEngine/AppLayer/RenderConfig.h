@@ -9,13 +9,13 @@ namespace SE
 	struct SRenderConfig
 	{
 		SRenderConfig()
-			:bFullScreen(false),ileft(0),iTop(0),ColorFmt(EF_ARGB8),
+			:bFullScreen(false),iLeft(0),iTop(0),ColorFmt(EF_ARGB8),
 			DepthStencilFmt(EF_D16),uSampleCount(1),uSampleQuality(0),
 			uMotionFrames(0),bHDR(false),bGamma(false),
-			eStereoMethod(STNone),fStereoSeparation(0)
+			eStereoMethod(STM_None),fStereoSeparation(0)
 		{}
 		bool bFullScreen;
-		int ileft;
+		int iLeft;
 		int iTop;
 		int iWidth;
 		int iHeight;

@@ -8,7 +8,7 @@
 
 namespace SE
 {
-	class _DLL_API CAPIObjFactory
+	class DLL_API CAPIObjFactory
 	{
 	public:
 		CAPIObjFactory();

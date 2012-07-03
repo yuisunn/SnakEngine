@@ -8,7 +8,7 @@
 
 namespace SE
 {
-	class _DLL_API D3D11Render :public CRender
+	class DLL_API D3D11Render :public CRender
 	{
 	public:
 		D3D11Render();

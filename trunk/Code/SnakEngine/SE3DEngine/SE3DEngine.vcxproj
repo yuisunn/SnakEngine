@@ -27,7 +27,7 @@
     <ClCompile Include="Comm\Time.cpp" />
     <ClCompile Include="DeviceLayer\WindApp.cpp" />
     <ClCompile Include="Image\CTexture.cpp" />
-    <ClCompile Include="Comm\SEContext.cpp" />
+    <ClCompile Include="Comm\RContext.cpp" />
     <ClCompile Include="RenderSystem\CAPIObjFactory.cpp" />
     <ClCompile Include="RenderSystem\CGraphBuffer.cpp" />
     <ClCompile Include="RenderSystem\CRenderStateObj.cpp" />
@@ -43,6 +43,7 @@
     <ClInclude Include="Audio\CAudioDataSource.h" />
     <ClInclude Include="CameraControl\UserControl.h" />
     <ClInclude Include="Audio\CAudioFactory.h" />
+    <ClInclude Include="Comm\VectorT.h" />
     <ClInclude Include="Front\Front.h" />
     <ClInclude Include="Input\CInput.h" />
     <ClInclude Include="Comm\BoundingGeo.h" />
@@ -59,13 +60,12 @@
     <ClInclude Include="RenderSystem\CAPIObjFactory.h" />
     <ClInclude Include="rendersystem\CRender.h" />
     <ClInclude Include="RenderSystem\CRenderStateObj.h" />
-    <ClInclude Include="RenderSystem\CShader.h" />
     <ClInclude Include="RenderSystem\CGraphBuffer.h" />
     <ClInclude Include="Render\IMaterial.h" />
     <ClInclude Include="Render\IShader.h" />
     <ClInclude Include="model\cmodel.h" />
     <ClInclude Include="model\mesh9.h" />
-    <ClInclude Include="Comm\SEContext.h" />
+    <ClInclude Include="Comm\RContext.h" />
     <ClInclude Include="ResourceSystem\CDataStream.h" />
     <ClInclude Include="SceneSystem\Camera.h" />
     <ClInclude Include="SceneSystem\Frustum.h" />
@@ -120,6 +120,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)..\..\OtherLibs\DXSDK\include;$(SolutionDir)..\SnakEngine;$(SolutionDir)..\..\OtherLibs\boost;$(IncludePath);$(SolutionDir)..\..\OtherLibs\rapidxml;$(SolutionDir)..\..\OtherLibs\oGles\AMD\include\GLE;$(SolutionDir)..\..\OtherLibs\libvorbis\include;$(SolutionDir)..\..\OtherLibs\libogg\include</AdditionalIncludeDirectories>
+      <TreatSpecificWarningsAsErrors>
+      </TreatSpecificWarningsAsErrors>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

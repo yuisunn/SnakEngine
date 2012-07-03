@@ -1,3 +1,4 @@
+// 用类似 qt 的信号 和插槽的东西实现窗口事件处理
 
 #ifndef _WINDOW_H_
 #define _WINDOW_H_
@@ -5,13 +6,14 @@
 #include <SE3DEngine/Config/Platform.h>
 #include <SE3DEngine/AppLayer/RenderConfig.h>
 #include <SE3DEngine/Comm/Def.h>
-
-#ifdef COMPILER_MSVS
+#include <SE3DEngine/Comm/VectorT.h>
+ #define _CRT_SECURE_NO_DEPRECATE
+#ifdef COMPILER_MSVC
 #pragma warning(push)
 #pragma warning(disable: 4100 4512 6011)
 #endif
 #include <boost/signals2.hpp>
-#ifdef COMPILER_MSVS
+#ifdef COMPILER_MSVC
 #pragma warning(pop)
 #endif
 
@@ -95,8 +97,8 @@ namespace SE
 		{
 			return m_iHeight;
 		}
-		//事件
-		/*
+		 
+		//型号和插槽
 	public:
 		typedef boost::signals2::signal<void(Window const &, bool)> ActiveEvent;
 		typedef boost::signals2::signal<void(Window const &)> PaintEvent;
@@ -107,85 +109,85 @@ namespace SE
 		typedef boost::signals2::signal<void(Window const &, wchar_t)> CharEvent;
 		typedef boost::signals2::signal<void(Window const &, wchar_t)> KeyDownEvent;
 		typedef boost::signals2::signal<void(Window const &, wchar_t)> KeyUpEvent;
-		typedef boost::signals2::signal<void(Window const &, uint32_t, Vector_T<int32_t, 2> const &)> MouseDownEvent;
-		typedef boost::signals2::signal<void(Window const &, uint32_t, Vector_T<int32_t, 2> const &)> MouseUpEvent;
-		typedef boost::signals2::signal<void(Window const &, uint32_t, Vector_T<int32_t, 2> const &, int32_t)> MouseWheelEvent;
-		typedef boost::signals2::signal<void(Window const &, uint32_t, Vector_T<int32_t, 2> const &)> MouseOverEvent;
+		typedef boost::signals2::signal<void(Window const &, uint32, Vector_T<int32, 2> const &)> MouseDownEvent;
+		typedef boost::signals2::signal<void(Window const &, uint32, Vector_T<int32, 2> const &)> MouseUpEvent;
+		typedef boost::signals2::signal<void(Window const &, uint32, Vector_T<int32, 2> const &, int32_t)> MouseWheelEvent;
+		typedef boost::signals2::signal<void(Window const &, uint32, Vector_T<int32, 2> const &)> MouseOverEvent;
 		typedef boost::signals2::signal<void(Window const &)> CloseEvent;
-
+		//返回 型号和操的函数
 		ActiveEvent& OnActive()
 		{
-			return active_event_;
+			return m_ActiveEvent;
 		}
 		PaintEvent& OnPaint()
 		{
-			return paint_event_;
+			return m_PaintEvent;
 		}
 		EnterSizeMoveEvent& OnEnterSizeMove()
 		{
-			return enter_size_move_event_;
+			return m_EnterSizeMoveEvent;
 		}
 		ExitSizeMoveEvent& OnExitSizeMove()
 		{
-			return exit_size_move_event_;
+			return m_ExitSizeMoveEvent;
 		}
 		SizeEvent& OnSize()
 		{
-			return size_event_;
+			return m_SizeEvent;
 		}
 		SetCursorEvent& OnSetCursor()
 		{
-			return set_cursor_event_;
+			return m_SetCursorEvent;
 		}
 		CharEvent& OnChar()
 		{
-			return char_event_;
+			return m_CharEvent;
 		}
 		KeyDownEvent& OnKeyDown()
 		{
-			return key_down_event_;
+			return m_KeyDownEvent;
 		}
 		KeyUpEvent& OnKeyUp()
 		{
-			return key_up_event_;
+			return m_KeyUpEvent;
 		}
 		MouseDownEvent& OnMouseDown()
 		{
-			return mouse_down_event_;
+			return m_MouseDownEvent;
 		}
 		MouseUpEvent& OnMouseUp()
 		{
-			return mouse_up_event_;
+			return m_MouseUpEvent;
 		}
 		MouseWheelEvent& OnMouseWheel()
 		{
-			return mouse_wheel_event_;
+			return m_MouseWheelEvent;
 		}
 		MouseOverEvent& OnMouseOver()
 		{
-			return mouse_over_event_;
+			return m_MouseOverEvent;
 		}
 		CloseEvent& OnClose()
 		{
-			return close_event_;
+			return m_CloseEvent;
 		}
 
 	private:
-		ActiveEvent active_event_;
-		PaintEvent paint_event_;
-		EnterSizeMoveEvent enter_size_move_event_;
-		ExitSizeMoveEvent exit_size_move_event_;
-		SizeEvent size_event_;
-		SetCursorEvent set_cursor_event_;
-		CharEvent char_event_;
-		KeyDownEvent key_down_event_;
-		KeyUpEvent key_up_event_;
-		MouseDownEvent mouse_down_event_;
-		MouseUpEvent mouse_up_event_;
-		MouseWheelEvent mouse_wheel_event_;
-		MouseOverEvent mouse_over_event_;
-		CloseEvent close_event_;
-		*/
+		ActiveEvent m_ActiveEvent;
+		PaintEvent m_PaintEvent;
+		EnterSizeMoveEvent m_EnterSizeMoveEvent;
+		ExitSizeMoveEvent m_ExitSizeMoveEvent;
+		SizeEvent m_SizeEvent;
+		SetCursorEvent m_SetCursorEvent;
+		CharEvent m_CharEvent;
+		KeyDownEvent m_KeyDownEvent;
+		KeyUpEvent m_KeyUpEvent;
+		MouseDownEvent m_MouseDownEvent;
+		MouseUpEvent m_MouseUpEvent;
+		MouseWheelEvent m_MouseWheelEvent;
+		MouseOverEvent m_MouseOverEvent;
+		CloseEvent m_CloseEvent;
+		
 
 #if defined SE_WINDOWS
 	private:

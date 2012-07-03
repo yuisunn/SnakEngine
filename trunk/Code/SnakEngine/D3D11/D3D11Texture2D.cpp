@@ -23,7 +23,7 @@ namespace SE
 			m_iNumMip = numMipMaps;
 		}
 
-		D3D11Render const & re = *checked_cast<D3D11Render const *>(&SEContext::Instance().InstFactory().InstRender());
+		D3D11Render const & re = *checked_cast<D3D11Render const *>(&RContext::Instance().InstFactory().InstRender());
 		if (re.DeviceFeatureLevel() <= D3D_FEATURE_LEVEL_9_3)
 		{
 			if ((m_iNumMip > 1) && (((width & (width - 1)) != 0) || ((height & (height - 1)) != 0)))
