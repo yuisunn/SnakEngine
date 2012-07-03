@@ -77,6 +77,9 @@
     <ClCompile Include="Front\Front.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="AppLayer\Window.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CameraControl\UserControl.h">
@@ -218,6 +221,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Front\Front.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AppLayer\Window.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

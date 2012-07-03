@@ -35,6 +35,7 @@
     <ClCompile Include="ResourceSystem\CFileDataStream.cpp" />
     <ClCompile Include="SceneSystem\Camera.cpp" />
     <ClCompile Include="SceneSystem\Frustum.cpp" />
+    <ClCompile Include="AppLayer\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppLayer\AppFramework.h" />
@@ -84,6 +85,7 @@
     <ClInclude Include="Config\Platform.h" />
     <ClInclude Include="Comm\Util.h" />
     <ClInclude Include="Comm\ThrowErr.h" />
+    <ClInclude Include="AppLayer\Window.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{02A6950B-6E5E-480B-B811-BA098F32BA53}</ProjectGuid>
