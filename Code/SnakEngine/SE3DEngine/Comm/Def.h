@@ -9,6 +9,7 @@
 //命名中加入 变量类型
 //float f int n unsigned 和 long 定义的用 n 表示  Vector v Matrix m char c
 //指针加p 引用加r
+//泛型stl 容器用t
 
 //类名 大头是 C或i 表示基类
 
@@ -80,8 +81,8 @@ namespace SE
 		//平台相关
 		class AppFramework;
 		typedef boost::shared_ptr<AppFramework> AppFrameworkPtr;
-		class AppWindow;
-		typedef boost::shared_ptr<AppWindow> AppWindowPtr;
+		class Window;
+		typedef boost::shared_ptr<Window> WindowPtr;
  //音频
 	class CAudio;
 	typedef boost::shared_ptr<CAudio> CAudioPtr;

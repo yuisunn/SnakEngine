@@ -1,7 +1,7 @@
 
 
 #include <boost/assert.hpp>
-#include <SE3DEngine/Comm/SEContext.h>
+#include <SE3DEngine/Comm/RContext.h>
 
 #include <SE3DEngine/AppLayer/AppFramework.h>
 namespace SE
@@ -12,22 +12,22 @@ namespace SE
 						: m_sName(sName),
 							m_fFPS(0), m_fAccumulateTime(0), m_uNumFrames(0)
 	{
-		SEContext::Instance().AppInstance(*this);
+		RContext::Instance().AppInstance(*this);
 
 #ifdef SE_ANDROID
 		m_pState = get_app();
 #endif
 
-		SConfig cfg = SEContext::Instance().Config();
+		SConfig cfg = RContext::Instance().Config();
 		m_pWind = this->MakeWindow(sName, cfg.m_RenderCfg);
-		cfg.m_RenderCfg.left = main_wnd_->Left();
-		cfg.m_RenderCfg.top = main_wnd_->Top();
-		cfg.m_RenderCfg.width = main_wnd_->Width();
-		cfg.m_RenderCfg.height = main_wnd_->Height();
-		Context::Instance().Config(cfg);
+		cfg.m_RenderCfg.iLeft = main_wnd_->Left();
+		cfg.m_RenderCfg.iTop = main_wnd_->Top();
+		cfg.m_RenderCfg.iWidth = main_wnd_->Width();
+		cfg.m_RenderCfg.iHeight = main_wnd_->Height();
+		RContext::Instance().Config(cfg);
 	}
 
-	AppFramework::~App3DFramework()
+	AppFramework::~AppFramework()
 	{
 		this->Destroy();
 
@@ -39,7 +39,7 @@ namespace SE
 	void AppFramework::Create()
 	{
 		SConfig const & cfg = Context::Instance().Config();
-		SEContext::Instance(). ().RenderEngineInstance().CreateRenderWindow(name_,
+		RContext::Instance(). ().RenderEngineInstance().CreateRenderWindow(name_,
 			cfg.graphics_cfg);
 
 		//if (cfg.deferred_rendering)

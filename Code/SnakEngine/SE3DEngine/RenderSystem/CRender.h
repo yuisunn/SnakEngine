@@ -7,7 +7,7 @@
 
 namespace SE
 {
-	class _DLL_API CRender
+	class DLL_API CRender
 	{
 	public:
 		CRender();

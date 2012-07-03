@@ -14,7 +14,7 @@ namespace SE
 	class OGLESTexture : public CTexture
 	{
 	public:
-		OGLESTexture(ETextureType eType, uint32 uSample, uint32 uQuality, uint32 uAccess);
+		OGLESTexture(ETextureType eType,uint32 uArraySize, uint32 uSample, uint32 uQuality, uint32 uAccess);
 		~OGLESTexture();
 		virtual const ETextureType GetTextureType() const;
 		virtual void CopyToTexture(CTexture& pTarget);

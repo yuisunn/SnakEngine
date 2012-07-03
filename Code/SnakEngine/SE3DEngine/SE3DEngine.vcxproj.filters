@@ -26,9 +26,6 @@
     <ClCompile Include="DeviceLayer\DeviceGL.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Comm\SEContext.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Image\CTexture.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -75,6 +72,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="AppLayer\Window.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Comm\RContext.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -169,16 +169,10 @@
     <ClInclude Include="rendersystem\CRender.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Comm\SEContext.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="image\ctexture.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="RenderSystem\CRenderStateObj.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderSystem\CShader.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="RenderSystem\CGraphBuffer.h">
@@ -218,6 +212,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="AppLayer\Window.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\VectorT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comm\RContext.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

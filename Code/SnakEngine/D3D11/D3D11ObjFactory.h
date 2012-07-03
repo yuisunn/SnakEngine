@@ -7,7 +7,7 @@
 
 namespace SE
 {
-	class _DLL_API D3D11ObjFactory : public CAPIObjFactory
+	class DLL_API D3D11ObjFactory : public CAPIObjFactory
 	{
 	public:
 		

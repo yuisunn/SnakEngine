@@ -3,7 +3,7 @@
 #include <GLES2/gl2ext.h>
 
 #include <SE3DEngine/Comm/Util.h>
-#include <SE3DEngine/Comm/SEContext.h>
+#include <SE3DEngine/Comm/RContext.h>
 
 #include <OpenglES/OGLESMapping.h>
 #include <OpenglES/OGLESTexture.h>
@@ -17,13 +17,13 @@ namespace SE
 	OGLESRasterizerStateObj::OGLESRasterizerStateObj(RasterizerStateDesc const & cpDesc)
 		: CRasterizerStateObj(cpDesc),
 		//“this”: 用于基成员初始值设定项列表
-			m_eGlFrontFace(this->m_Desc.m_bFrontFaceCCW ? GL_CCW : GL_CW)
+			m_eGlFrontFace(m_Desc.m_bFrontFaceCCW ? GL_CCW : GL_CW)
 	{
 	}
 
 	void OGLESRasterizerStateObj::Active()
 	{
-		OGLESRender& re = *checked_cast<OGLESRender*>(&SEContext::Instance().InstFactory().InstRender());
+		OGLESRender& re = *checked_cast<OGLESRender*>(&RContext::Instance().InstFactory().InstRender());
 
 		RasterizerStateDesc const & cur_desc = re.CurRasStateObj()->GetDesc();
 
@@ -125,7 +125,7 @@ namespace SE
 
 	void OGLESDepthStencilStateObj::Active(uint16 uFrontStencilRef, uint16 uBackStencilRef)
 	{
-		OGLESRender& re = *checked_cast<OGLESRender*>(&SEContext::Instance().InstFactory().InstRender());
+		OGLESRender& re = *checked_cast<OGLESRender*>(&RContext::Instance().InstFactory().InstRender());
 
 		DepthStencilStateDesc const & cur_desc = re.CurDepthStenStateObj()->GetDesc();
 		uint16 const cur_front_stencil_ref = re.CurFrontStencilRef();
@@ -258,7 +258,7 @@ namespace SE
 
 	void OGLESBlendStateObj::Active(Color const & cpBlendFactor, uint32 uSampleMask)
 	{
-		OGLESRender& re = *checked_cast<OGLESRender*>(&SEContext::Instance().InstFactory().InstRender());
+		OGLESRender& re = *checked_cast<OGLESRender*>(&RContext::Instance().InstFactory().InstRender());
 
 		BlendStateDesc const& cur_desc = re.CurBlendStateObj()->GetDesc();
 		Color const& cur_blend_factor = re.CurBlendFactor();

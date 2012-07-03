@@ -7,7 +7,7 @@
 #include <SE3DEngine/Comm/Util.h>
 #include <D3D11/D3D11Mapping.h>
 #include <D3D11/D3D11Render.h>
-#include <SE3DEngine/Comm/SEContext.h>
+#include <SE3DEngine/Comm/RContext.h>
 
 
 namespace SE
@@ -30,7 +30,7 @@ namespace SE
 	//	d3d_desc.MultisampleEnable = cpDesc.m_bMultiSampleEnable;
 	//	d3d_desc.AntialiasedLineEnable = cpDesc.m_bMultiSampleEnable;
 
-	//	ID3D11DevicePtr const & d3d_device = checked_cast<D3D11Render*>(&SEContext::Instance().InstFactory().InstRender())->GetD3DDevice();
+	//	ID3D11DevicePtr const & d3d_device = checked_cast<D3D11Render*>(&RContext::Instance().InstFactory().InstRender())->GetD3DDevice();
 
 	//	ID3D11RasterizerState* rasterizer_state;
 	//	ErO(d3d_device->CreateRasterizerState(&d3d_desc, &rasterizer_state));
@@ -39,7 +39,7 @@ namespace SE
 	////激活
 	//void D3D11RasterizerStateObj::Active()
 	//{
-	//	D3D11Render& re = *checked_cast<D3D11Render*>(&SEContext::Instance().InstFactory().InstRender());
+	//	D3D11Render& re = *checked_cast<D3D11Render*>(&RContext::Instance().InstFactory().InstRender());
 	//	re.RSSetState(m_pRastState);
 	//}
 	////深度模板 参数
@@ -69,7 +69,7 @@ namespace SE
 	//	d3d_desc.BackFace.StencilPassOp = D3D11Mapping::Mapping(cpDesc.m_eBackStencilPass);
 	//	d3d_desc.BackFace.StencilFunc = D3D11Mapping::Mapping(cpDesc.m_eBackStencilFunc);
 
-	//	ID3D11DevicePtr const& d3d_device = checked_cast<D3D11Render*>(&SEContext::Instance().InstFactory().InstRender())->GetD3DDevice();
+	//	ID3D11DevicePtr const& d3d_device = checked_cast<D3D11Render*>(&RContext::Instance().InstFactory().InstRender())->GetD3DDevice();
 
 	//	ID3D11DepthStencilState* ds_state;
 	//	ErO(d3d_device->CreateDepthStencilState(&d3d_desc, &ds_state));
@@ -78,7 +78,7 @@ namespace SE
 	////深度模板 set到gpu
 	//void D3D11DepthStencilStateObj::Active(uint16 uFrontStenRef, uint16 uBackStenRef)
 	//{
-	//	D3D11Render& re = *checked_cast<D3D11Render*>(&SEContext::Instance().InstFactory().InstRender());
+	//	D3D11Render& re = *checked_cast<D3D11Render*>(&RContext::Instance().InstFactory().InstRender());
 	//	re.OMSetDepthStencilState(m_pDepthStenState, uFrontStenRef);
 	//}
 	////混合创建
@@ -100,7 +100,7 @@ namespace SE
 	//		d3d_desc.RenderTarget[i].BlendOpAlpha = D3D11Mapping::Mapping(cpDesc.m_BlendOpAlphas[i]);
 	//	}
 
-	//	ID3D11DevicePtr const & d3d_device = checked_cast<D3D11Render*>(&SEContext::Instance().InstFactory().InstRender())->GetD3DDevice();
+	//	ID3D11DevicePtr const & d3d_device = checked_cast<D3D11Render*>(&RContext::Instance().InstFactory().InstRender())->GetD3DDevice();
 
 	//	ID3D11BlendState* blend_state;
 	//	ErO(d3d_device->CreateBlendState(&d3d_desc, &blend_state));
@@ -109,14 +109,14 @@ namespace SE
 	////blend 激活设置
 	//void D3D11BlendStateObj::Active(Color const& cpBlendFactor, uint32 uSampleMask)
 	//{
-	//	D3D11Render& re = *checked_cast<D3D11Render*>(&SEContext::Instance().InstFactory().InstRender());
+	//	D3D11Render& re = *checked_cast<D3D11Render*>(&RContext::Instance().InstFactory().InstRender());
 	//	//混合状态设置 出入gpu？
 	//	re.OMSetBlendState(m_pBlendState, cpBlendFactor, uSampleMask);
 	//}
 	//D3D11SamplerStateObj::D3D11SamplerStateObj(SamplerStateDesc const& cpDesc)
 	//	: CSamplerStateObj(cpDesc)
 	//{
-	//	D3D11Render const& render_eng = *checked_cast<D3D11Render const *>(&SEContext::Instance().InstFactory().InstRender());
+	//	D3D11Render const& render_eng = *checked_cast<D3D11Render const *>(&RContext::Instance().InstFactory().InstRender());
 	//	ID3D11DevicePtr const & d3d_device = render_eng.GetD3DDevice();
 	//	D3D_FEATURE_LEVEL feature_level = render_eng.DeviceFeatureLevel();
 
