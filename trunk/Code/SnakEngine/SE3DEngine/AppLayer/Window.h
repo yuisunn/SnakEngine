@@ -59,22 +59,22 @@ namespace SE
 #elif defined SE_LINUX
 		::Display* XDisplay() const
 		{
-			return x_display_;
+			return m_XDisplay;
 		}
 
 		::XVisualInfo* VisualInfo() const
 		{
-			return vi_;
+			return m_Vi;
 		}
 
 		::Window XWindow() const
 		{
-			return x_window_;
+			return m_XWindow;
 		}
 #elif defined SE_ANDROID
 		::ANativeWindow* AWindow() const
 		{
-			return a_window_;
+			return m_AWindow;
 		}
 #endif
 
@@ -217,13 +217,13 @@ namespace SE
 
 		HWND m_HWND;
 #elif defined SE_LINUX
-		::Display* x_display_;
-		::GLXFBConfig* fbc_;
-		::XVisualInfo* vi_;
-		::Window x_window_;
-		::Atom wm_delete_window_;
+		::Display* m_XDisplay;
+		::GLXFBConfig* m_Fbc;
+		::XVisualInfo* m_Vi;
+		::Window m_XWindow;
+		::Atom m_WmDeleteWindow;
 #elif defined SE_ANDROID
-		::ANativeWindow* a_window_;
+		::ANativeWindow* m_AWindow;
 #endif
 	};
 }

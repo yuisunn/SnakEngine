@@ -65,9 +65,6 @@
     <ClCompile Include="AppLayer\AppFramework.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="AppLayer\AppWindow.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="RenderSystem\CAPIObjFactory.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -203,9 +200,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SceneSystem\Frustum.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="AppLayer\AppWindow.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="AppLayer\AppFramework.h">
