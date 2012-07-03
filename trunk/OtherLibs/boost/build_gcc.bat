@@ -1,1 +1,0 @@
-bjam.exe --toolset=gcc --stagedir=./lib_gcc_x86 --builddir=./ architecture=x86 address-model=32 --with-date_time --with-filesystem --with-program_options --with-signals --with-system --with-thread link=shared runtime-link=shared linkflags=-enable-auto-import stage debug release
