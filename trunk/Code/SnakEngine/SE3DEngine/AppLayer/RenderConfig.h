@@ -9,27 +9,27 @@ namespace SE
 	struct SRenderConfig
 	{
 		SRenderConfig()
-			:m_bFullScreen(false),m_ileft(0),m_iTop(0),m_ColorFmt(EF_ARGB8),
-			m_DepthStencilFmt(EF_D16),m_uSampleCount(1),m_uSampleQuality(0),
-			m_uMotionFrames(0),m_bHDR(false),m_bGamma(false),
-			m_eStereoMethod(STM_None),m_fStereoSeparation(0)
+			:bFullScreen(false),ileft(0),iTop(0),ColorFmt(EF_ARGB8),
+			DepthStencilFmt(EF_D16),uSampleCount(1),uSampleQuality(0),
+			uMotionFrames(0),bHDR(false),bGamma(false),
+			eStereoMethod(STNone),fStereoSeparation(0)
 		{}
-		bool m_bFullScreen;
-		int m_ileft;
-		int m_iTop;
-		int m_iWidth;
-		int m_iHeight;
-		PixelFormat m_ColorFmt;
-		PixelFormat m_DepthStencilFmt;
-		uint32 m_uSampleCount;
-		uint32 m_uSampleQuality;
-		uint32 m_uSyncInterval;
-		uint32 m_uMotionFrames;
-		bool m_bHDR;
-		bool m_bGamma;
+		bool bFullScreen;
+		int ileft;
+		int iTop;
+		int iWidth;
+		int iHeight;
+		PixelFormat ColorFmt;
+		PixelFormat DepthStencilFmt;
+		uint32 uSampleCount;
+		uint32 uSampleQuality;
+		uint32 uSyncInterval;
+		uint32 uMotionFrames;
+		bool bHDR;
+		bool bGamma;
 
-	    StereoMethod m_eStereoMethod;
-		float m_fStereoSeparation;
+	    StereoMethod eStereoMethod;
+		float fStereoSeparation;
 	};
 }
 
