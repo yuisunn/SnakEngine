@@ -1,8 +1,8 @@
 #ifndef _Platform_H_
 #define _Platform_H_
 
-#define MSVS_COMPILER
-
+#define COMPILER_MSVS
+//#define COMPILER_GCC
 
 #define SE_WINDOWS
 //#define SE_LINUX
