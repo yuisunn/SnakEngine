@@ -167,6 +167,10 @@ struct IShader;
 typedef boost::shared_ptr<IShader> IShaderPtr;
 class CRender;
 typedef boost::shared_ptr<CRender> CRenderPtr;
+class RenderView;
+typedef boost::shared_ptr<RenderView> RenderViewPtr;
+class CFrameBuffer;
+typedef boost::shared_ptr<CFrameBuffer> CFrameBufferPtr;
 
 struct STexMaterial;
 typedef boost::shared_ptr<STexMaterial> STexMaterialPtr;
@@ -220,6 +224,7 @@ typedef boost::shared_ptr<CSamplerStateObj> CSamplerStateObjPtr;
 //∑∫–Õ¿‡–Õ
 
 typedef std::string String;
+typedef std::wstring WString;
 typedef Vector4 Color;
 typedef unsigned long long int ResourceHandle;
 

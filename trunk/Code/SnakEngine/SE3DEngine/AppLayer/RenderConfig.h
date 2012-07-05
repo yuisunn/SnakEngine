@@ -27,8 +27,9 @@ namespace SE
 		uint32 uMotionFrames;
 		bool bHDR;
 		bool bGamma;
-
-	    StereoMethod eStereoMethod;
+		bool bPPAA;
+		bool bColorGrading;
+	    EStereoMethod eStereoMethod;
 		float fStereoSeparation;
 	};
 }

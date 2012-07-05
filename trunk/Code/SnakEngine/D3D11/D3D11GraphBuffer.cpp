@@ -2,7 +2,7 @@
 #include <SE3DEngine/Comm/ThrowErr.h>
 #include <boost/assert.hpp>
 #include <D3D11/D3D11Render.h>
-#include <SE3DEngine/Comm/RContext.h>
+#include <SE3DEngine/Comm/MonFac.h>
 #include <D3D11/D3D11Mapping.h>
 
 namespace SE
@@ -16,7 +16,7 @@ namespace SE
 			m_uBindFlag = 0;
 		}
 
-		D3D11Render const & ren(*checked_cast<D3D11Render const *>(&RContext::Instance().InstFactory().InstRender()));
+		D3D11Render const & ren(*checked_cast<D3D11Render const *>(&MonFac::Only().InstFactory().InstRender()));
 		m_pDevice = ren.GetD3DDevice();
 		m_pImmContext = ren.GetD3DDeviceImmContext();
 		m_uByteSize = 0;
@@ -129,7 +129,7 @@ namespace SE
 		{
 			puBindFlag = m_uBindFlag;
 		}
-		D3D11Render const & ren = *checked_cast<D3D11Render const *>(&RContext::Instance().InstFactory().InstRender());
+		D3D11Render const & ren = *checked_cast<D3D11Render const *>(&MonFac::Only().InstFactory().InstRender());
 		if (ren.DeviceFeatureLevel() > D3D_FEATURE_LEVEL_9_3)
 		{
 			if (m_uAcces & EAH_GPU_Read)

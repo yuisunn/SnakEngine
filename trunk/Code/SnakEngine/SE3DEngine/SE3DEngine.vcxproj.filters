@@ -74,7 +74,19 @@
     <ClCompile Include="AppLayer\Window.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Comm\RContext.cpp">
+    <ClCompile Include="Comm\MonFac.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem\FrameBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem\CRender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem\RenderView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem\CFrameBuffer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -217,7 +229,19 @@
     <ClInclude Include="Comm\VectorT.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Comm\RContext.h">
+    <ClInclude Include="Comm\MonFac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\DeviceCaps.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\FrameBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\RenderView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem\CFrameBuffer.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,7 +4,7 @@
 
 #include <SE3DEngine/Comm/Util.h>
 
-#include <SE3DEngine/Comm/RContext.h>
+#include <SE3DEngine/Comm/MonFac.h>
 #include <OpenglES/OGLESRender.h>
 
 
@@ -20,7 +20,7 @@ namespace SE
 		{
 			m_uByteSize = cpInitData->m_uRowPitch;
 
-			OGLESRender& re = *checked_cast<OGLESRender*>(&RContext::Instance().InstFactory().InstRender());
+			OGLESRender& re = *checked_cast<OGLESRender*>(&MonFac::Only().InstFactory().InstRender());
 			re.BindBuffer(m_eBufType, m_buf);
 			glBufferData(m_eBufType,
 				static_cast<GLsizeiptr>(m_uByteSize), cpInitData->m_cpData,
@@ -31,9 +31,9 @@ namespace SE
 	}
 	OGLESGraphBuffer::~OGLESGraphBuffer()
 	{
-		if(RContext::Instance().FactoryIsNull())
+		if(MonFac::Only().FactoryIsNull())
 		{
-			OGLESRender& re = *checked_cast<OGLESRender*>(&RContext::Instance().InstFactory().InstRender());
+			OGLESRender& re = *checked_cast<OGLESRender*>(&MonFac::Only().InstFactory().InstRender());
 			re.DeleteBuffer(1,&m_buf);
 
 		}
@@ -76,7 +76,7 @@ namespace SE
 		{
 		case BA_Write_Only:
 		case BA_Read_Write:
-			OGLESRender& re = *checked_cast<OGLESRender*>(&RContext::Instance().InstFactory().InstRender());
+			OGLESRender& re = *checked_cast<OGLESRender*>(&MonFac::Only().InstFactory().InstRender());
 			re.BindBuffer(m_eBufType, m_buf);
 			// TODO: fix OES_mapbuffer
 			/*if (glloader_GLES_OES_mapbuffer())
@@ -94,7 +94,7 @@ namespace SE
 	{
 		BOOST_ASSERT(m_uByteSize != 0);
 
-		OGLESRender& re = *checked_cast<OGLESRender*>(&RContext::Instance().InstFactory().InstRender());
+		OGLESRender& re = *checked_cast<OGLESRender*>(&MonFac::Only().InstFactory().InstRender());
 		re.BindBuffer(m_eBufType,m_buf);
 		glBufferData(m_eBufType,static_cast<GLsizeiptr>(m_uByteSize),NULL,(BU_Static==m_eUsage)?GL_STATIC_DRAW:GL_DYNAMIC_DRAW);
 		m_uDatas.resize(m_uByteSize);
