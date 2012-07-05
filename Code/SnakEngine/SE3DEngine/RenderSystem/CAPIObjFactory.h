@@ -6,6 +6,7 @@
 #include <SE3DEngine/RenderSystem/CRenderStateObj.h>
 #include <map>
 
+
 namespace SE
 {
 	class DLL_API CAPIObjFactory
@@ -28,9 +29,14 @@ namespace SE
 			PixelFormat format, uint32 uSampleCount, uint32 SampleQuality, uint32 uAccessHint, PixelInitData const * cpInitData) = 0;
 	    //创建 shader virtual
 		//创建 render state
-	private:
+		// Get render device capabilities
+
+private:
 		virtual CRenderPtr MakeRender() = 0;
+		
 		CRenderPtr m_pRen;
+
+
 		std::map<RasterizerStateDesc, CRasterizerStateObjPtr> m_RasStatePool;
 		std::map<DepthStencilStateDesc, CDepthStencilStateObjPtr> m_DepthStenStatePool;
 		std::map<BlendStateDesc, CBlendStateObjPtr> m_BlendStatePool;

@@ -8,8 +8,8 @@ namespace SE
 			if (0 == uNumMipMap)
 		{
 			num_mip_maps_ = 1;
-			uint32_t w = width;
-			uint32_t h = height;
+			uint32 w = width;
+			uint32 h = height;
 			while ((w != 1) || (h != 1))
 			{
 				++ num_mip_maps_;
@@ -23,7 +23,7 @@ namespace SE
 			m_iNumMip = numMipMaps;
 		}
 
-		D3D11Render const & re = *checked_cast<D3D11Render const *>(&RContext::Instance().InstFactory().InstRender());
+		D3D11Render const & re = *checked_cast<D3D11Render const *>(&MonFac::Only().InstFactory().InstRender());
 		if (re.DeviceFeatureLevel() <= D3D_FEATURE_LEVEL_9_3)
 		{
 			if ((m_iNumMip > 1) && (((width & (width - 1)) != 0) || ((height & (height - 1)) != 0)))

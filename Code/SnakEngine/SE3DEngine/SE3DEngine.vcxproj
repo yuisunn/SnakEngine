@@ -16,6 +16,8 @@
     <ClCompile Include="Audio\CAudioBuffer.cpp" />
     <ClCompile Include="Audio\CAudioDataSource.cpp" />
     <ClCompile Include="Audio\CAudioFactory.cpp" />
+    <ClCompile Include="RenderSystem\CFrameBuffer.cpp" />
+    <ClCompile Include="RenderSystem\CRender.cpp" />
     <ClCompile Include="Front\Front.cpp" />
     <ClCompile Include="Input\CInput.cpp" />
     <ClCompile Include="Comm\CThread.cpp" />
@@ -27,10 +29,11 @@
     <ClCompile Include="Comm\Time.cpp" />
     <ClCompile Include="DeviceLayer\WindApp.cpp" />
     <ClCompile Include="Image\CTexture.cpp" />
-    <ClCompile Include="Comm\RContext.cpp" />
+    <ClCompile Include="Comm\MonFac.cpp" />
     <ClCompile Include="RenderSystem\CAPIObjFactory.cpp" />
     <ClCompile Include="RenderSystem\CGraphBuffer.cpp" />
     <ClCompile Include="RenderSystem\CRenderStateObj.cpp" />
+    <ClCompile Include="RenderSystem\RenderView.cpp" />
     <ClCompile Include="ResourceSystem\CFileDataStream.cpp" />
     <ClCompile Include="SceneSystem\Camera.cpp" />
     <ClCompile Include="SceneSystem\Frustum.cpp" />
@@ -41,9 +44,11 @@
     <ClInclude Include="AppLayer\RenderConfig.h" />
     <ClInclude Include="Audio\CAudio.h" />
     <ClInclude Include="Audio\CAudioDataSource.h" />
-    <ClInclude Include="CameraControl\UserControl.h" />
+
     <ClInclude Include="Audio\CAudioFactory.h" />
     <ClInclude Include="Comm\VectorT.h" />
+    <ClInclude Include="RenderSystem\CFrameBuffer.h" />
+    <ClInclude Include="RenderSystem\DeviceCaps.h" />
     <ClInclude Include="Front\Front.h" />
     <ClInclude Include="Input\CInput.h" />
     <ClInclude Include="Comm\BoundingGeo.h" />
@@ -61,11 +66,12 @@
     <ClInclude Include="rendersystem\CRender.h" />
     <ClInclude Include="RenderSystem\CRenderStateObj.h" />
     <ClInclude Include="RenderSystem\CGraphBuffer.h" />
+    <ClInclude Include="RenderSystem\RenderView.h" />
     <ClInclude Include="Render\IMaterial.h" />
     <ClInclude Include="Render\IShader.h" />
     <ClInclude Include="model\cmodel.h" />
     <ClInclude Include="model\mesh9.h" />
-    <ClInclude Include="Comm\RContext.h" />
+    <ClInclude Include="Comm\MonFac.h" />
     <ClInclude Include="ResourceSystem\CDataStream.h" />
     <ClInclude Include="SceneSystem\Camera.h" />
     <ClInclude Include="SceneSystem\Frustum.h" />

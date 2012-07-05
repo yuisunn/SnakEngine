@@ -691,7 +691,7 @@ namespace SE
 	};
 
 
-	enum StereoMethod
+	enum EStereoMethod
 	{
 		STM_None,
 		STM_ColorAnaglyph_RedCyan,
