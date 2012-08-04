@@ -9,7 +9,7 @@
 namespace SE
 {
 	size_t const READSIZE(88200);//不知道什么玩意
-		// 检查一个音频缓冲区是否空闲
+	// 检查一个音频缓冲区是否空闲
 	/////////////////////////////////////////////////////////////////////////////////
 	bool IsSourceFree(ALuint source)
 	{
@@ -77,7 +77,7 @@ namespace SE
 					data.resize(m_pDataSource->Read(&data[0], data.size()));
 					if (!data.empty())
 					{
-						alBufferData(buf, Convert(m_Format), &data[0],
+						alBufferData(buf, Convert(m_eFormat), &data[0],
 							static_cast<ALsizei>(data.size()), m_uFreq);
 						alSourceQueueBuffers(m_uSource, 1, &buf);
 					}
@@ -116,7 +116,7 @@ namespace SE
 			alSourceUnqueueBuffers(m_uSource, queued_, &cur_queue[0]);
 		}
 
-		ALenum const format(Convert(m_Format));
+		ALenum const format(Convert(m_eFormat));
 		std::vector<uint8_t> data(READSIZE);
 
 		m_pDataSource->Reset();
@@ -257,7 +257,7 @@ namespace SE
 		std::vector<uint8_t> data(m_pDataSource->GetSize());
 		m_pDataSource->Read(&data[0], data.size());
 
-		alBufferData(m_uBuf, Convert(m_Format), &data[0], static_cast<ALsizei>(data.size()), m_uFreq);
+		alBufferData(m_uBuf, Convert(m_eFormat), &data[0], static_cast<ALsizei>(data.size()), m_uFreq);
 
 		alGenSources(static_cast<ALsizei>(m_uSources.size()), &m_uSources[0]);
 
