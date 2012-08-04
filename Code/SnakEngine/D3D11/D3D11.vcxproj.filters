@@ -15,16 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D3D11Texture.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="D3D11GraphBuffer.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="D3D11Render.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="D3D11ObjFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Texture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11FrameBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11GraphBuffer.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="D3D11Mapping.h">
@@ -33,27 +36,39 @@
     <ClInclude Include="D3D11RenderStateObj.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Dxdef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11RenderView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D3D11Texture.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="D3D11GraphBuffer.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="D3D11Render.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="D3D11ObjFactory.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="D3D11Mapping.cpp">
+    <ClCompile Include="D3D11Texture.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="D3D11Texture2D.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="D3D11FrameBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11GraphBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Mapping.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="D3D11RenderStateObj.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11RenderView.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
