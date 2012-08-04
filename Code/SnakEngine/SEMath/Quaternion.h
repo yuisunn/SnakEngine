@@ -333,6 +333,15 @@ public:
 		return *this;
 	}
 	
+	inline Quaternion &operator*=(Quaternion &rhs)
+	{
+		///? 四元数 乘法是叉乘
+		*this = Quaternion(x*rhs.w - y*rhs.z + z*rhs.y + w*rhs.x,
+			              x*rhs.z + y*rhs.w - z*rhs.x + w*rhs.y,
+						  y*rhs.x - x*rhs.y + z*rhs.w + w*rhs.z,
+						  w*rhs.w - x*rhs.x - y*rhs.y - z*rhs.z);
+		return *this;
+	}
 
 
 
@@ -385,14 +394,13 @@ inline Quaternion operator-(Quaternion &a, Quaternion &b)
 
 	return c;
 }
-inline Quaternion operator*(float scalar, const Quaternion& q)
+inline Quaternion operator*(const Quaternion& lhs, const Quaternion& rhs)
 {
 	Quaternion result;
-
-	result.x = scalar * q.x;
-	result.y = scalar * q.y;
-	result.z = scalar * q.z;
-	result.w = scalar * q.w;
+	result.x = lhs.x*rhs.w - lhs.y*rhs.z + lhs.z*rhs.y + lhs.w*rhs.x;
+	result.y = lhs.x*rhs.z + lhs.y*rhs.w - lhs.z*rhs.x + lhs.w*rhs.y;
+	result.z = lhs.y*rhs.x - lhs.x*rhs.y + lhs.z*rhs.w + lhs.w*rhs.z;
+	result.w = lhs.w*rhs.w - lhs.x*rhs.x - lhs.y*rhs.y - lhs.z*rhs.z;
 	return result;
 }
 

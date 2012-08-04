@@ -12,6 +12,7 @@ Matrix4x4 g_MatrixSSE_Identity = Matrix4x4SSE
 	0.0f, 0.0f, 0.0f, 1.0f
 );
 
+
 #define IEEE_SP_ZERO ((unsigned int) 0)
 #define IEEE_SP_SIGN ((unsigned int) ( 1 << 31 )) 
 

@@ -22,34 +22,30 @@ __declspec(align(16)) extern Vector4SSE g_Vector4SSE_SignMask;
 
 class  Vector4SSE
 {
-public:
-	union{
-		__m128 m_Vec;
-		__declspec(align(16))
-		struct 
-		{
-			float x,y,z,w;
+	public:
+		union{
+			__m128 m_Vec;
+			__declspec(align(16))
+			struct 
+			{
+				float x,y,z,w;
+			};
+			float m_elem[4];
 		};
-		float m_elem[4];
-	};
 
-public:
-
+	public:
 	//Ìí¼Ó 
-inline Vector4SSE& CheckMin(Vector4SSE& a)
-{
-	m_Vec = _mm_min_ps(m_Vec, a.m_Vec);
-	return *this;
-}
-inline Vector4SSE& CheckMax(Vector4SSE& a)
-{
-	m_Vec = _mm_max_ps(m_Vec, a.m_Vec);
-	return *this;
+	inline Vector4SSE& CheckMin(Vector4SSE& a)
+	{
+		m_Vec = _mm_min_ps(m_Vec, a.m_Vec);
+		return *this;
+	}
+	inline Vector4SSE& CheckMax(Vector4SSE& a)
+	{
+		m_Vec = _mm_max_ps(m_Vec, a.m_Vec);
+		return *this;
 
-}
-
-
-
+	}
 
 	inline Vector4SSE(void)
 	{
@@ -65,12 +61,6 @@ inline Vector4SSE& CheckMax(Vector4SSE& a)
 	{
 		m_Vec = _mm_set_ps1(value);
 	}
-
-	inline Vector4SSE(Vector4SSE &rhs)
-	{
-		m_Vec = rhs.m_Vec;
-	}
-
 
 
 	inline Vector4SSE(unsigned int x, unsigned int y, unsigned int z, unsigned int w)
