@@ -1,7 +1,7 @@
 #ifndef _OALAudio_H_
 #define _OALAudio_H_
 
-#include <SE3DEngine/Config/Platform.h>
+#include <SE3DEngine/Config/Config.h>
 
 #ifdef SE_WINDOWS
 #include <al.h>
@@ -17,6 +17,7 @@
 
 #include <SE3DEngine/Comm/Def.h>
 #include <SE3DEngine/Audio/CAudio.h>
+#include <SE3DEngine/Audio/CAudioBuffer.h>
 #include <SE3DEngine/Audio/CAudioDataSource.h>
 #include <SEMath/Vector3.h>
 
