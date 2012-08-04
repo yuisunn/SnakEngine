@@ -13,5 +13,5 @@ Vector3 g_Vector3_SignMask = Vector3( (unsigned int)0x80000000 );
 
 void Vector3::ConsoleOutput(void)
 {
-	printf("Vector: (%5.2f,%5.2f,%5.2f,%5.2f)\n", x, y, z);
+	printf("Vector: (%5.2f,%5.2f,%5.2f)\n", x, y, z);
 }

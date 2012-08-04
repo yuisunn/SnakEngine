@@ -7,7 +7,7 @@
 #include <SEMath/Matrix4x4_Reference.h> 
 // Intel SSE instruction version
 #include <SEMath/Matrix4x4_SSE.h> 
-#include <SE3DEngine/Config/Platform.h>
+#include <SE3DEngine/Config/Config.h>
 
 
 #ifndef SE_CPU_X86

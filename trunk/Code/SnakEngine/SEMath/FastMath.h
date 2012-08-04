@@ -3,139 +3,14 @@
 
 #define MATH_PI 3.141592653f
 
-#include <float.h>
-#include <stdio.h>
-#include <math.h>
-#include <SE3DEngine/Config/Platform.h>
+#include <limits>
+//#include <boost/static_assert.hpp>
+#include <SE3DEngine/Config/Config.h>
 
 namespace SEMath
 {
-
-	class Degree;
-	class Radian;
-
-	class Radian
-	{
-		float mRad;
-
-	public:
-		explicit Radian ( float r=0 ) : mRad(r) {}
-		Radian ( const Degree& d );
-		Radian& operator = ( const float& f ) { mRad = f; return *this; }
-		Radian& operator = ( const Radian& r ) { mRad = r.mRad; return *this; }
-		Radian& operator = ( const Degree& d );
-
-		float valueDegrees() const; // see bottom of this file
-		float valueRadians() const { return mRad; }
-		float valueAngleUnits() const;
-
-        const Radian& operator + () const { return *this; }
-		Radian operator + ( const Radian& r ) const { return Radian ( mRad + r.mRad ); }
-		Radian operator + ( const Degree& d ) const;
-		Radian& operator += ( const Radian& r ) { mRad += r.mRad; return *this; }
-		Radian& operator += ( const Degree& d );
-		Radian operator - () const { return Radian(-mRad); }
-		Radian operator - ( const Radian& r ) const { return Radian ( mRad - r.mRad ); }
-		Radian operator - ( const Degree& d ) const;
-		Radian& operator -= ( const Radian& r ) { mRad -= r.mRad; return *this; }
-		Radian& operator -= ( const Degree& d );
-		Radian operator * ( float f ) const { return Radian ( mRad * f ); }
-        Radian operator * ( const Radian& f ) const { return Radian ( mRad * f.mRad ); }
-		Radian& operator *= ( float f ) { mRad *= f; return *this; }
-		Radian operator / ( float f ) const { return Radian ( mRad / f ); }
-		Radian& operator /= ( float f ) { mRad /= f; return *this; }
-
-		bool operator <  ( const Radian& r ) const { return mRad <  r.mRad; }
-		bool operator <= ( const Radian& r ) const { return mRad <= r.mRad; }
-		bool operator == ( const Radian& r ) const { return mRad == r.mRad; }
-		bool operator != ( const Radian& r ) const { return mRad != r.mRad; }
-		bool operator >= ( const Radian& r ) const { return mRad >= r.mRad; }
-		bool operator >  ( const Radian& r ) const { return mRad >  r.mRad; }
-
-		//inline _OgreExport friend std::ostream& operator <<
-		//	( std::ostream& o, const Radian& v )
-		//{
-		//	o << "Radian(" << v.valueRadians() << ")";
-		//	return o;
-		//}
-	};
-
-	class Degree
-	{
-		float mDeg; // if you get an error here - make sure to define/typedef 'float' first
-
-	public:
-		explicit Degree ( float d=0 ) : mDeg(d) {}
-		Degree ( const Radian& r ) : mDeg(r.valueDegrees()) {}
-		Degree& operator = ( const float& f ) { mDeg = f; return *this; }
-		Degree& operator = ( const Degree& d ) { mDeg = d.mDeg; return *this; }
-		Degree& operator = ( const Radian& r ) { mDeg = r.valueDegrees(); return *this; }
-
-		float valueDegrees() const { return mDeg; }
-		float valueRadians() const; // see bottom of this file
-		float valueAngleUnits() const;
-
-		const Degree& operator + () const { return *this; }
-		Degree operator + ( const Degree& d ) const { return Degree ( mDeg + d.mDeg ); }
-		Degree operator + ( const Radian& r ) const { return Degree ( mDeg + r.valueDegrees() ); }
-		Degree& operator += ( const Degree& d ) { mDeg += d.mDeg; return *this; }
-		Degree& operator += ( const Radian& r ) { mDeg += r.valueDegrees(); return *this; }
-		Degree operator - () const { return Degree(-mDeg); }
-		Degree operator - ( const Degree& d ) const { return Degree ( mDeg - d.mDeg ); }
-		Degree operator - ( const Radian& r ) const { return Degree ( mDeg - r.valueDegrees() ); }
-		Degree& operator -= ( const Degree& d ) { mDeg -= d.mDeg; return *this; }
-		Degree& operator -= ( const Radian& r ) { mDeg -= r.valueDegrees(); return *this; }
-		Degree operator * ( float f ) const { return Degree ( mDeg * f ); }
-        Degree operator * ( const Degree& f ) const { return Degree ( mDeg * f.mDeg ); }
-		Degree& operator *= ( float f ) { mDeg *= f; return *this; }
-		Degree operator / ( float f ) const { return Degree ( mDeg / f ); }
-		Degree& operator /= ( float f ) { mDeg /= f; return *this; }
-
-		bool operator <  ( const Degree& d ) const { return mDeg <  d.mDeg; }
-		bool operator <= ( const Degree& d ) const { return mDeg <= d.mDeg; }
-		bool operator == ( const Degree& d ) const { return mDeg == d.mDeg; }
-		bool operator != ( const Degree& d ) const { return mDeg != d.mDeg; }
-		bool operator >= ( const Degree& d ) const { return mDeg >= d.mDeg; }
-		bool operator >  ( const Degree& d ) const { return mDeg >  d.mDeg; }
-
-		//inline _OgreExport friend std::ostream& operator <<
-		//	( std::ostream& o, const Degree& v )
-		//{
-		//	o << "Degree(" << v.valueDegrees() << ")";
-		//	return o;
-		//}
-	};
-
-
-	//平面方程算点面相交
-	template<typename T> 
-	inline float dot_coord(T const &lhs, T const &rhs)
-	{
-		return lhs.x*rhs.x + lhs.y*rhs.y + lhs.z*rhs.z + lhs.w;
-	}
-	inline float DegreeToRadian(float r)
-	{
-		float radian = r * (MATH_PI / 180.0f);
-		return radian;
-	}
-
-	inline float DegToRad(float r)
-	{
-		return DegreeToRadian(r);
-	}
-
-	inline float RadianToDegree(float r)
-	{
-		float degree = r * (180.0f / MATH_PI);
-		return degree;
-	}
-
-	inline float RadToDeg(float r)
-	{
-		return RadianToDegree(r);
-	}
-
 	//基本数学运算
+	//////////////////////////
 #ifdef SE_CPU_X86
 	template<class T> inline void Swap(T &a, T &b)
 	{
@@ -380,7 +255,7 @@ namespace SEMath
 //#endif
 //#ifdef SE_CPU_ARM
 #else
-		template<class T> inline void Swap(T &a, T &b)
+	template<class T> inline void Swap(T &a, T &b)
 	{
 
 	      T c; c=a; a=b; b=c;  
@@ -479,7 +354,62 @@ namespace SEMath
 		return a - (int)a;
 	}
 #endif
+    // 判断两个数是否相等
+	////////////////////
+	template <typename T>
+	inline bool
+	equal(T const & lhs, T const & rhs)
+	{
+		return (lhs == rhs);
+	}
+	///?template <> 函数模板特化：当函数模板需要对某些类型进行特别处理，称为函数模板的特化。 必须有一个普通模板版本实现
+	// 浮点版本
+	template <>
+	inline bool
+	equal<float>(float const & lhs, float const & rhs)
+	{
+		return (abs(lhs - rhs)
+			<= std::numeric_limits<float>::epsilon());
+	}
+	//双字节版
+	template <>
+	inline bool
+	equal<double>(double const & lhs, double const & rhs)
+	{
+		return (abs(lhs - rhs)
+			<= std::numeric_limits<double>::epsilon());
+	}
+	//平面方程算点面相交
+	////////////////////////////
+	template<typename T> 
+	inline float dot_coord(T const &lhs, T const &rhs)
+	{
+		return lhs.x*rhs.x + lhs.y*rhs.y + lhs.z*rhs.z + lhs.w;
+	}
+	inline float DegreeToRadian(float r)
+	{
+		float radian = r * (MATH_PI / 180.0f);
+		return radian;
+	}
+
+	inline float DegToRad(float r)
+	{
+		return DegreeToRadian(r);
+	}
+
+	inline float RadianToDegree(float r)
+	{
+		float degree = r * (180.0f / MATH_PI);
+		return degree;
+	}
+
+	inline float RadToDeg(float r)
+	{
+		return RadianToDegree(r);
+	}
+
 };
+
 
 
 #endif // _SEMath_WIN32_

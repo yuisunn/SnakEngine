@@ -5,7 +5,7 @@
 #include <SEMath/Vector4_Reference.h>
 // Intel SSE instruction Version
 #include <SEMath/Vector4_SSE.h>
-#include <SE3DEngine/Config/Platform.h>
+#include <SE3DEngine/Config/Config.h>
 
 #ifndef SE_CPU_X86
 typedef Vector4CPU Vector4;

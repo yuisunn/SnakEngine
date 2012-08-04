@@ -14,6 +14,7 @@ class Vector4CPU;
 extern Vector4CPU g_Vector4CPU_Zero;
 extern Vector4CPU g_Vector4CPU_One;
 
+
 class  Vector4CPU
 {
 public:
